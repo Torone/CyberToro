@@ -11,7 +11,7 @@ Icons provided by [ionicons](http://ionicons.com/) and released under The MIT Li
 <!--
 [My personal website](http://www.andrea-turri.com) is always running the latest version of **GhosToro**. You can preview all new features there.
 -->
-The latest version of **CyberToro** is running [here](http://178.62.113.88:8880) on Heroku.
+The latest version of **CyberToro** is running [here](https://cybertoro.herokuapp.com/) on Heroku.
 
 _No changes to the original code yet..._
 
