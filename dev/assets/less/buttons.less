@@ -1,0 +1,40 @@
+.btn {
+	background-color: @grey300;
+	border: none;
+	.border-radius(2px);
+	margin: @8 0;
+	outline: none;
+	padding: @4 @16;
+	.transition(background-color 0.3s ease-in-out);
+
+	&:hover {
+		background-color: @grey400;
+	}
+
+	&.btn-blue {
+		background-color: @lightBlue700;
+		color: @grey50;
+
+		&:hover {
+			background-color: @lightBlue900;
+		}
+	}
+
+	&.btn-green {
+		background-color: @lightGreen500;
+		color: @grey50;
+
+		&:hover {
+			background-color: @lightGreen700;
+		}
+	}
+
+	&.btn-red {
+		background-color: @deepOrange500;
+		color: @grey50;
+
+		&:hover {
+			background-color: @deepOrange700;
+		}
+	}
+}

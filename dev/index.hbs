@@ -1,0 +1,30 @@
+{{!< default}}
+
+{{#foreach posts}}
+
+    <article class="preview">
+        <header>
+            <h1 class="post-title">
+                <a href="{{url}}">{{title}}</a>
+            </h1>
+            <div class="clearfix">
+                <ul class="post-meta">
+                    <li><span class="ion-person"></span>{{author}}</li>
+                    {{#if tags}}
+                        <li><span class="ion-pricetags"></span>{{tags}}</li>
+                    {{/if}}
+                    <li><span class="ion-calendar"></span><time datetime="{{date format='DD-MM-YYYY'}}">{{date format="dddd DD MMMM YYYY"}}</time></li>
+                </ul>
+            </div>
+            {{#if image}}
+                <img class="post-cover-image" src="{{image}}" alt="{{title}} cover image" />
+            {{/if}}
+        </header>
+        <section class="post-excerpt">
+            <p>{{excerpt}}&hellip;</p>
+        </section>
+    </article>
+
+{{/foreach}}
+
+{{pagination}}

@@ -1,0 +1,155 @@
+.nav {
+	display: table-row;
+	height: 33%;
+
+	.menu {
+		display: table-cell;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+
+		li {
+
+			&.menu-trigger {
+				display: none;
+
+				button {
+					background: transparent;
+					border: none;
+					color: @lightBlue900;
+					.font-size(4);
+					outline: none;
+					.transition(color 0.3s ease-in-out);
+
+					&:hover {
+						color: @grey50;
+					}
+				}
+
+				&.active {
+
+					button {
+						color: @grey50;
+					}
+				}
+			}
+
+			a {
+				color: @lightBlue900;
+				font-family: @headingFont;
+				font-weight: 700;
+				display: inline-block;
+				letter-spacing: 0.05em;
+				margin: @8 0;
+				padding: @8 0 @4;
+				position: relative;
+				text-decoration: none;
+				text-transform: uppercase;
+				.transition(color 0.3s ease-in-out);
+
+				&:before,
+				&:after {
+					background: @grey50;
+					content: '';
+					.opacity(0);
+					position: absolute;
+					left: 0;
+					.transition(all 0.3s ease-in-out);
+					.transform(translateY(-10px));
+					width: 100%;
+					height: 2px;
+				}
+
+				&:before {
+					top: 0;
+					.transform(translateY(-10px));
+				}
+
+				&:after {
+					bottom: 0;
+					.transform(translateY(10px));
+				}
+
+				&:hover,
+				&.active {
+					color: @grey50;
+
+					&:before,
+					&:after {
+						.opacity(1);
+						.transform(translateY(0px));
+					}
+				}
+			}
+		}
+	}
+}
+
+.menu-active {
+
+	.menu {
+
+		li {
+
+			&.menu-trigger {
+
+				button {
+					color: @grey50;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 480px) {
+
+	.nav {
+		display: block;
+		height: auto;
+
+		.menu {
+			display: inline-block;
+		}
+	}
+
+}
+
+@media only screen and (min-width : 481px) and (max-width: 992px) {
+
+	.nav {
+		display: block;
+		height: auto;
+
+		.menu {
+			display: block;
+
+			li {
+				.opacity(0);
+				.transition(opacity 0.3s ease-in-out);
+				visibility: hidden;
+
+				&.menu-trigger {
+					display: block;
+					.opacity(1);
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	.menu-active {
+
+		.nav {
+
+			.menu {
+
+				li {
+					.opacity(1);
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+}

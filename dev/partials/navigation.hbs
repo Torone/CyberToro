@@ -1,0 +1,12 @@
+<nav class="nav" role="nav">
+  <ul class="menu">
+		<li class="menu-trigger">
+			<button><span class="ion-navicon"></span></button>
+		</li>
+  	{{#foreach navigation }}
+    	<li>
+    		<a href="{{url absolute="true"}}" class="{{#if current}}active{{/if}}">{{label}}</a>
+    	</li>
+    {{/foreach}}
+  </ul>
+</nav>

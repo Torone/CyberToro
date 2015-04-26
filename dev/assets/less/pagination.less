@@ -1,0 +1,55 @@
+.pagination {
+	.font-size(1.4);
+	text-align: center;
+
+	.page-number {
+		display: inline-block;
+		padding: @4;
+	}
+
+	.btn {
+		background-color: @lightBlue700;
+		.border-radius(2px);
+		color: @grey50;
+		float: left;
+		padding: @4 @16;
+	}
+
+	.newer-posts,
+	.older-posts {
+		text-transform: uppercase;
+		.transition(background-color 0.3s ease-in-out);
+
+		&.disabled {
+			background-color: @lightBlue100;
+			cursor: not-allowed;
+
+			&:hover {
+				background-color: @lightBlue100;
+			}
+		}
+
+		&:hover {
+			background-color: @lightBlue900;
+		}
+	}
+
+	.newer-posts {
+		float: left;
+	}
+
+	.older-posts {
+		float: right;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+
+	.pagination {
+
+		.page-number {
+			display: none;
+		}
+	}
+
+}

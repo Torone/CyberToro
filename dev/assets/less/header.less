@@ -1,0 +1,46 @@
+.header {
+	display: table-row;
+	height: 34%;
+
+	.logo {
+		.transition(width 0.3s ease-in-out);
+		width: 280px;
+
+		img {
+			width: inherit;
+		}
+	}
+
+	.description {
+		color: @grey50;
+		font-family: @headingFont;
+		letter-spacing: 0.05em;
+	}
+}
+
+.menu-active {
+
+	.header {
+
+		.logo {
+			width: 280px;
+		}
+	}
+}
+
+@media only screen and (max-width : 480px) {
+
+	.header {
+		display: block;
+		height: auto;
+	}
+
+}
+
+@media only screen and (min-width : 481px) and (max-width: 992px) {
+
+	.header {
+		margin-top: @8;
+	}
+
+}
